@@ -38,3 +38,10 @@
 ## Props
 ### Props are attributes of components.
 ### Props are used to pass data from one component to other.
+### Components with props makes components acts more dynamic
+## Passing object through props from one component to other component. 
+![Screenshot](props-object.png)
+## Passing object from one component to other component using object destructuring. 
+![Screenshot](props-object-destructure.png)
+## Passing data as individual properties from one component to other component using props.
+![Screenshot](props-with-fields.png) 

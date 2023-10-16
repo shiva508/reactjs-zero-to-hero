@@ -5,19 +5,19 @@ function App() {
   const expenses = [
     {
       expenseId: 1,
-      expenseDate: new Date("1991-07-08").toDateString(),
+      expenseDate: new Date("1991-08-08"),
       expenseName: "Car Insurence",
       expensePrice: 408.08,
     },
     {
       expenseId: 2,
-      expenseDate: new Date("1991-07-08").toDateString(),
+      expenseDate: new Date("1991-07-08"),
       expenseName: "Bike",
       expensePrice: 508.08,
     },
     {
       expenseId: 3,
-      expenseDate: new Date("1991-07-08").toDateString(),
+      expenseDate: new Date("1991-03-08"),
       expenseName: "New Laptop",
       expensePrice: 808.08,
     },
