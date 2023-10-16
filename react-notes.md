@@ -24,3 +24,17 @@
 ### Holds multiple values
 
 ## # Array Destructuring
+
+## React basics
+## What is component
+### Component is re-usable entity just like pugguable , acts as individual building blocks.
+### Reuseability and seperate of concerns.
+### Split big application into small reuseable parts.
+### A component build using HTML,CSS,Javascript.
+## JSX
+### JavaScript XML
+## How React Works
+### There shold be only one root element for return statement.
+## Props
+### Props are attributes of components.
+### Props are used to pass data from one component to other.
