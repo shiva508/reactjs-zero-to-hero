@@ -45,3 +45,9 @@
 ![Screenshot](props-object-destructure.png)
 ## Passing data as individual properties from one component to other component using props.
 ![Screenshot](props-with-fields.png) 
+## DOM
+### Document Object Model
+## Virtual DOM
+### Is a javascript object, light weight representation of DOM
+### Updating virtual DOM is much faster than updating real DOM 
+### So when there is change in page virtual DOM updates component that has changes, instead of updaing entair page by comparing old and new virtual DOM.
