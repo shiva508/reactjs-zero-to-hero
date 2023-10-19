@@ -23,4 +23,14 @@ input{
     height: 50px;
     width: 100px;
     border-radius: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+   
 }

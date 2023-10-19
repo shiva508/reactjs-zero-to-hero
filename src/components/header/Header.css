@@ -1,0 +1,22 @@
+.header-container{
+    width: 100%;
+    background-color: aliceblue;
+}
+.header-content{
+    display: flex;
+}
+.ul-list{
+    display: flex;
+    flex-direction: row;
+}
+.li-list{
+    font-size: 24px;
+    padding: 8px;
+    margin-right: 20px;
+}
+li{
+    list-style: none;
+    border-radius: 12px;
+    background-color: rgb(98, 52, 172);
+    
+}

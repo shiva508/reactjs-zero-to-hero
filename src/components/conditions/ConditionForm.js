@@ -11,8 +11,11 @@ const ConditionForm = () => {
         <h2 className="input-lable">Symble</h2>
         <input type="text"></input>
       </div>
-      <div className="input-container">
-        <button className="btn"> Add</button>
+      <div className="button-container">
+        <button className="btn" onClick={() => console.log("Welcome")}>
+          {" "}
+          Add
+        </button>
       </div>
     </div>
   );

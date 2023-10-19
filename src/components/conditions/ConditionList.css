@@ -1,0 +1,8 @@
+.conditionlist-container{
+    display: flex;
+    flex-direction: column;
+}
+.condition-list-cont{
+    width: 100%;
+    height: 700px;
+}
