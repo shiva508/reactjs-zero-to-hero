@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.rule-engine-main-container{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,26 @@
+.form-container{
+    background-color: rgb(49, 49, 48);
+    max-width: 700px;
+    color: white;
+    border-radius: 12px;
+}
+.input-container{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.input-lable{
+    font-size: 13px;
+    font-weight: bold;
+}
+input{
+    width: 319px;
+    height: 35px;
+    border-radius: 8px;
+}
+.btn{
+    height: 50px;
+    width: 100px;
+    border-radius: 8px;
+}
