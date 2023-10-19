@@ -13,7 +13,6 @@ const ConditionForm = () => {
       </div>
       <div className="button-container">
         <button className="btn" onClick={() => console.log("Welcome")}>
-          {" "}
           Add
         </button>
       </div>
