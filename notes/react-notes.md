@@ -51,3 +51,6 @@
 ### Is a javascript object, light weight representation of DOM
 ### Updating virtual DOM is much faster than updating real DOM 
 ### So when there is change in page virtual DOM updates component that has changes, instead of updaing entair page by comparing old and new virtual DOM.
+## Component Composition
+### We can pass other component as child to different component.
+![Screenshot](child-components.png) 
