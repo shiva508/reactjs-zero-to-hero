@@ -26,11 +26,7 @@
   margin: 0 1rem;
   color: white;
 }
-.expense-item__date{
-  font-size: 1rem;
-  font-weight: bold;
-  margin-right: 14px;
-}
+
 .expense-item__price {
   font-size: 1rem;
   font-weight: bold;
