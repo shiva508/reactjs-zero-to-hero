@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CourseForm from "./components/coursegoals/courseform/CourseForm";
+import CourseGoalList from "./components/coursegoals/coursegoallist/CourseGoalList";
+import { useState } from "react";
 
 function App() {
+  const addNewCourseHandler = (course) => {
+    setCourses((prevCourse) => {
+      return [course, ...prevCourse];
+    });
+  };
+  const deleteCourseHandler = (id) => {
+    setCourses((prevCourses) => {
+      const filteredCource = prevCourses.filter((data) => data.id !== id);
+      return filteredCource;
+    });
+  };
+  const [courses, setCourses] = useState([{ id: 1, name: "java" }]);
+  let courseContent = (
+    <p style={{ textAlign: "center" }}>No goals found. Maybe add one?</p>
+  );
+  if (courses.length > 0) {
+    courseContent = (
+      <CourseGoalList
+        courses={courses}
+        deleteCourceMaster={deleteCourseHandler}
+      />
+    );
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <section className="goal-form">
+        <CourseForm addNewCourse={addNewCourseHandler} />
+      </section>
+      <section className="goals">{courseContent}</section>
     </div>
   );
 }
