@@ -7,8 +7,10 @@ function App() {
   return (
     <div className="rule-engine-main-container">
       <Header />
-      <ConditionForm />
-      <ConditionList />
+      {/* <ConditionForm /> */}
+      <div>
+        <ConditionList />
+      </div>
     </div>
   );
 }

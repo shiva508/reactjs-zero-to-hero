@@ -1,21 +1,54 @@
+import { useState } from "react";
 import Card from "../ui/Card";
 import Condition from "./Condition";
+import ConditionForm from "./ConditionForm";
 import "./ConditionList.css";
+const BASE_DATA =
+  true === false
+    ? [
+        { conditionId: 1, conditionTitle: "Equals", symbol: "==" },
+        { conditionId: 2, conditionTitle: "Greater Than", symbol: ">" },
+        { conditionId: 3, conditionTitle: "Less Than", symbol: "<" },
+      ]
+    : [];
 const ConditionList = (props) => {
-  const conditions = [
-    { conditionId: 1, conditionTitle: "Equals", symbol: "==" },
-    { conditionId: 2, conditionTitle: "Greater Than", symbol: ">" },
-    { conditionId: 3, conditionTitle: "Less Than", symbol: "<" },
-  ];
+  const [conditions, setConditions] = useState(BASE_DATA);
+  const newConditionHandle = (condition) => {
+    console.log(condition);
+    setConditions((prevCondition) => {
+      return [condition, ...prevCondition];
+    });
+  };
+  let conditionOutput = <p>No Data available</p>;
+  if (conditions.length > 0) {
+    conditionOutput = conditions.map((data) => (
+      <Condition key={data.conditionId} condition={data} />
+    ));
+  }
   return (
-    <Card className="condition-list-cont">
-      <h1>Conditions</h1>
-      <div className="conditions-data">
-        {conditions.map((data) => (
-          <Condition key={data.conditionId} condition={data} />
-        ))}
+    <div>
+      <ConditionForm onAddingNewCondition={newConditionHandle} />
+      <div>
+        <Card className="condition-list-cont">
+          <h1>Conditions</h1>
+          <div className="conditions-data">
+            {conditionOutput}
+            {/* {conditions.length === 0 && <p>No Data available</p>}
+            {conditions.length > 0 &&
+              conditions.map((data) => (
+                <Condition key={data.conditionId} condition={data} />
+              ))} */}
+            {/* {conditions.length === 0 ? (
+              <p>No Data available</p>
+            ) : (
+              conditions.map((data) => (
+                <Condition key={data.conditionId} condition={data} />
+              ))
+            )} */}
+          </div>
+        </Card>
       </div>
-    </Card>
+    </div>
   );
 };
 export default ConditionList;

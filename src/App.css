@@ -37,7 +37,7 @@
   }
 }
 .rule-engine-main-container{
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   text-align: center;
   align-items: center;
