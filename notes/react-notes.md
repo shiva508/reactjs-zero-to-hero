@@ -54,3 +54,8 @@
 ## Component Composition
 ### We can pass other component as child to different component.
 ![Screenshot](child-components.png) 
+## State
+### State used to register some value in the component and modify them 
+## Lifting state up
+## Derrived - Computed state
+### Value that is derrived from state is called derrived state
