@@ -6,6 +6,7 @@ import { useState } from "react";
 
 function App() {
   const [calculations, setCalculations] = useState([]);
+
   const yearCalDataHandler = (calcution) => {
     console.log(calcution);
     let currentSavings = +calcution.currentSavings;
