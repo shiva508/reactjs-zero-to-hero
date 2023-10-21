@@ -1,5 +1,7 @@
 import "./App.css";
 import CourseForm from "./components/coursegoals/courseform/CourseForm";
+import CourseFormMod from "./components/coursegoals/courseform/CourseFormMod";
+import StyledCourseForm from "./components/coursegoals/courseform/StyledCourseForm";
 import CourseGoalList from "./components/coursegoals/coursegoallist/CourseGoalList";
 import { useState } from "react";
 
@@ -31,7 +33,9 @@ function App() {
   return (
     <div>
       <section className="goal-form">
-        <CourseForm addNewCourse={addNewCourseHandler} />
+        {/* <CourseForm addNewCourse={addNewCourseHandler} /> */}
+        {/* <StyledCourseForm addNewCourse={addNewCourseHandler} /> */}
+        <CourseFormMod addNewCourse={addNewCourseHandler}></CourseFormMod>
       </section>
       <section className="goals">{courseContent}</section>
     </div>
