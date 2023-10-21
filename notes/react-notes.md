@@ -59,3 +59,4 @@
 ## Lifting state up
 ## Derrived - Computed state
 ### Value that is derrived from state is called derrived state
+## Styling
