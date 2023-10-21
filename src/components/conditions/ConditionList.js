@@ -4,7 +4,7 @@ import Condition from "./Condition";
 import ConditionForm from "./ConditionForm";
 import "./ConditionList.css";
 const BASE_DATA =
-  true === false
+  true === true
     ? [
         { conditionId: 1, conditionTitle: "Equals", symbol: "==" },
         { conditionId: 2, conditionTitle: "Greater Than", symbol: ">" },
