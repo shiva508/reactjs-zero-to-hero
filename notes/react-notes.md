@@ -59,3 +59,18 @@
 ## Lifting state up
 ## Derrived - Computed state
 ### Value that is derrived from state is called derrived state
+## Fragment
+### React does not allow two root elements, when we have more that two root elements we have to wrap it with one root element.
+### Like div we can use, or any element, only rule is we should have only one.
+### When we add div it adds one more attribute, it may distrube styles 
+## Portals
+### Used to render unwanted modals to display on specific location
+### add to index.html where you want to display model
+### Like <div id="modal-root"></div>
+### Create portal using reactDOM and add id and component
+### {ReactDOM.createPortal(<ModalOverlay title={props.title}/>,  document.getElementById("modal-root"))}
+## Ref
+### useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+## Controlled and Uncontrolled
+###  Controlled componets maitains state 
+###  Uncontrolled componets does not maitains state 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import Button from "../../ui/button/Button";
 import Card from "../../ui/card/Card";
 import styles from "./AddUser.module.css";
@@ -10,19 +10,23 @@ const INITIAL = {
 const AddUser = (props) => {
   const [user, setUser] = useState(INITIAL);
   const [error, setError] = useState(false);
+  const nameInputRef = useRef("");
+  const ageInputRef = useRef("");
+
   const addUserHandler = (event) => {
+    const nameInputRefValue = nameInputRef.current.value;
+    const ageInputRefValue = ageInputRef.current.value;
     event.preventDefault();
     if (
-      user?.name?.trim()?.length === 0 ||
-      user?.age?.trim()?.length === 0 ||
-      parseInt(user?.age?.trim()) <= 0
+      nameInputRefValue?.trim()?.length === 0 ||
+      ageInputRefValue?.trim()?.length === 0 ||
+      parseInt(ageInputRefValue?.trim()) <= 0
     ) {
       setError((prevDara) => {
         return true;
       });
       return;
     }
-    console.log(user);
     props.addNewUser(user);
     setUser(INITIAL);
   };
@@ -37,7 +41,7 @@ const AddUser = (props) => {
     });
   };
   return (
-    <div>
+    <Fragment>
       {error && (
         <ErrorModel
           clearError={clearErrorHandler}
@@ -53,6 +57,7 @@ const AddUser = (props) => {
               type="text"
               value={user.name}
               id="username"
+              ref={nameInputRef}
               onChange={(event) =>
                 commonInputChangehandler("name", event.target.value)
               }
@@ -64,6 +69,7 @@ const AddUser = (props) => {
               type="number"
               value={user.age}
               id="userage"
+              ref={ageInputRef}
               onChange={(event) =>
                 commonInputChangehandler("age", event.target.value)
               }
@@ -74,7 +80,7 @@ const AddUser = (props) => {
           </div>
         </form>
       </Card>
-    </div>
+    </Fragment>
   );
 };
 export default AddUser;

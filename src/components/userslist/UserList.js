@@ -1,7 +1,7 @@
 import Card from "../../ui/card/Card";
 import styles from "./UserList.module.css";
 const UserList = (props) => {
-  const content = <p className={styles.emptyContent}>Please add some users</p>;
+  let content = <p className={styles.emptyContent}>Please add some users</p>;
   if (props?.users?.length > 0) {
     content = (
       <ul>
