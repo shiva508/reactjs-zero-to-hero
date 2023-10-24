@@ -74,3 +74,17 @@
 ## Controlled and Uncontrolled
 ###  Controlled componets maitains state 
 ###  Uncontrolled componets does not maitains state 
+## useEffect() 
+### used when you want render conditionaly where there is change in specific params
+### It is executed after render function execution
+## useReducer()
+### When component has many state updates using multiple event handlers,maintaining state is difficult and too much work done in component.
+### Using reducer we can group all state update logics into a single function
+### const [state, dispatch] = useReducer(reducer, initialArg, init?)
+### reducer: The reducer function that specifies how the state gets updated. It must be pure, should take the state and action as arguments, and should return the next state. State and action can be of any types.
+### initialArg: The value from which the initial state is calculated. It can be a value of any type. How the initial state is calculated from it depends on the next init argument.
+### optional init: The initializer function that should return the initial state. If it’s not specified, the initial state is set to initialArg. Otherwise, the initial state is set to the result of calling init(initialArg).
+### useReducer returns an array with exactly two values:
+### 1). The current state. During the first render, it’s set to init(initialArg) or initialArg (if there’s no init).
+### 2). The dispatch function that lets you update the state to a different value and trigger a re-render.
+
