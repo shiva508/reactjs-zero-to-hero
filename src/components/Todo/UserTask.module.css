@@ -1,0 +1,8 @@
+.mainContainer{
+    background-color: white;
+    margin: 0 auto;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
