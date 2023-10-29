@@ -1,10 +1,14 @@
+import { Fragment } from "react";
 import "./App.css";
+import Headers from "./components/Headers";
+import Quiz from "./components/Quiz";
 
 function App() {
   return (
-    <div>
-      <h1>React Js Practice</h1>
-    </div>
+    <Fragment>
+      <Headers></Headers>
+      <Quiz></Quiz>
+    </Fragment>
   );
 }
 
