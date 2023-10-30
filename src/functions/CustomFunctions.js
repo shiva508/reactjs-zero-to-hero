@@ -3,6 +3,19 @@ function helloWord() {
 }
 helloWord();
 
+function triggerLoggingOne() {
+  console.log("triggerLoggingOne");
+}
+const triggerLoggingTwo = () => {
+  console.log("triggerLoggingTwo");
+};
+setTimeout(() => {
+  console.log("anonymous");
+}, 100);
+setTimeout(triggerLoggingOne, 100);
+setTimeout(triggerLoggingTwo, 100);
+
+
 function welcomeToWorld(name) {
   console.log("Welcome ," + name);
 }
