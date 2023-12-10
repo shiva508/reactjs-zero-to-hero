@@ -91,11 +91,13 @@ function App() {
             playerName="Player-1"
             playerSymbol="X"
             isActive={activePlayer === "X"}
+            onChangeName={handlePlayerNameChange}
           />
           <Player
             playerName="Player-2"
             playerSymbol="O"
             isActive={activePlayer === "O"}
+            onChangeName={handlePlayerNameChange}
           />
         </ol>
         {(winner || hasDraw) && (
