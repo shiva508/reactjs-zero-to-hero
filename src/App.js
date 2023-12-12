@@ -1,10 +1,15 @@
 import "./App.css";
+import AuthInputs from "./AuthInputs";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div>
-      <h1>React Js Practice</h1>
-    </div>
+    <>
+      <Header />
+      <main>
+        <AuthInputs />
+      </main>
+    </>
   );
 }
 
